@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <title>Covid-19 Tracker</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .sembuh_tambah {
+            color: transparent
+        }
+
+        .loading {
+            color: transparent;
+        }
+
+        .red {
+            background-color: #ff3838;
+            border: #ff3838;
+        }
+
+        .yellow {
+            background-color: #fff200;
+            border: #fff200;
+        }
+
+        .green {
+            background-color: #32ff7e;
+            border: #32ff7e;
+        }
+
+        .blue {
+            background-color: #00bfff;
+            border: #00bfff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- container pertama -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 my-5 mx-auto text-center">
+                <h1 class="my-3">Covid-19 Tracker </h1>
+                <h5>Website for tracking coronavirus in global</h5>
+                <div class="row my-4">
+                    <div class="col-3"></div>
+                    <div class="col-5 px-0">
+                        <div class="input-group">
+                            <input class="form-control input" id="exampleDataList" placeholder="Nama Negara">
+                        </div>
+                    </div>
+                    <div class="col-1 px-0">
+                        <button type="submit" class="btn btn-primary search">Cari</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- akhir container pertama -->
+
+    <!-- awal container kedua -->
+    <div class="container card_section">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="country">Negara : Indonesia </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm yellow  m-lg-0 px-lg-0 m-1 my-md-1">
+                    <div class="card-body py-3">
+                        <h5 class="card-title text-center fs-6 ">Kasus Aktif </h5>
+                        <h2 class="text-center kasus_aktif container_isi">
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                </div>
+                            </div>
+                        </h2>
+                        <p class="text-center m-0 tambah_aktif penambahan loading">
+                            tes
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm green  m-lg-0 px-lg-0 m-1 my-md-1">
+                    <div class="card-body py-3">
+                        <h5 class="card-title text-center fs-6"> Total Pasien Sembuh </h5>
+                        <h2 class="text-center sembuh container_isi">
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                </div>
+                            </div>
+                        </h2>
+                        <p class="text-center m-0 sembuh_tambah penambahan loading">+ 8</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm red  m-lg-0 px-lg-0 m-1 my-md-1">
+                    <div class="card-body py-3">
+                        <h5 class="card-title text-center fs-6">Total Kematian </h5>
+                        <h2 class="text-center kematian container_isi">
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                </div>
+                            </div>
+                        </h2>
+                        <p class="text-center m-0 kematian_tambah penambahan loading">+74</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow-sm blue  m-lg-0 px-lg-0 m-1 my-md-1">
+                    <div class="card-body py-3">
+                        <h5 class="card-title text-center fs-6">Total Kasus Covid-19 </h5>
+                        <h2 class="text-center total_kasus container_isi">
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                </div>
+                            </div>
+                        </h2>
+                        <p class="text-center m-0 tests penambahan loading fs-6">Jumlah Test: 76.138.437</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-md-4">
+                <p class="last_update">Terakhir Update : <input class="date" type="date" name="" id="" value=""></p>
+            </div>
+            <div class="col-md-8 text-end ">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- akhir container keduas -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script src="Statistic_API.js"></script>
+    <script src="datalist_API.js"> </script>
+</body>
+
+</html>
