@@ -8,8 +8,7 @@ $(document).ready(function () {
             console.log("ketiga" , country)  
             // ambil date hari ini
             date = new Date();
-            var today = date.getFullYear() + '-' + ("0" + (date.getMonth() + 1)).slice(-2) + '-' + date
-                .getDate();
+            var today = date.getFullYear() + '-' + ("0" + (date.getMonth() + 1)).slice(-2) + '-' + ("0" + (date.getDate())).slice(-2)
             $('.date').val(today)
 
             // menambahkan titik di angka
